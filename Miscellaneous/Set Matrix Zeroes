@@ -1,0 +1,29 @@
+// BEst approach
+// here we r using the matrix space rather than two new vectors but for mattix[0][0] we need to have new variable so we r taking col var(?)
+// now we r traversing from 1 to last row and 1 to last col so that first row and col doesn't get affected
+// now we r first changing row ele and then col elements (?) as it might possible that col var might change matrix[0][0] that leads to wrong ans
+
+
+void setZeroes(vector<vector<int>>& matrix) {
+    int n=matrix.size();
+    int m=matrix[0].size();
+    int forC=1;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if(matrix[i][j]==0){
+                matrix[i][0]=0;
+                if(j==0) forC=0;
+                else matrix[0][j]=0;
+            }
+        }
+    }
+    for(int i=1;i<n;i++){
+        for(int j=1;j<m;j++){
+            if(matrix[i][0]==0 || matrix[0][j]==0 ) matrix[i][j]=0;
+        }
+    }
+    if(matrix[0][0]==0)
+        for(int i=1;i<m;i++) matrix[0][i]=0;
+    if(forC==0)
+        for(int j=0;j<n;j++) matrix[j][0]=0;
+}
