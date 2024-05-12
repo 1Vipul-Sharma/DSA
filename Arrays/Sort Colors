@@ -1,0 +1,26 @@
+//BRUTE
+void sortColors(vector<int>& nums) {
+    sort(nums.begin(),nums.end());
+}
+
+//BETTER
+void sortColors(vector<int>& nums) {
+    int cnt_0=0,cnt_1=0;
+    for(int i=0;i<nums.size();i++) {
+        if(nums[i]==0) cnt_0++;
+        else if(nums[i]==1) cnt_1++;
+    }
+    int i=0;
+    while(i<nums.size()){
+        if(cnt_0>0) {
+            nums[i]=0;
+            cnt_0--;
+        }
+        else if(cnt_1>0){
+            nums[i]=1;
+            cnt_1--;
+        }
+        else nums[i]=2;
+        i++;
+    }
+}

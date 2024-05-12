@@ -1,0 +1,28 @@
+//BRUTE
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int n=prices.size();
+        int ans=0;
+        for(int i=0;i<n-1;i++){
+            for(int j=i+1;j<n;j++){
+                int curr=prices[j]-prices[i];
+                ans=max(ans,curr);
+            }
+        }
+        return ans;
+    }
+};
+
+
+//Better
+int maxProfit(vector<int>& prices) {
+        int n=prices.size();
+        int ans=0,SP=prices[n-1];
+        for(int i=n-2;i>=0;i--){
+            ans=max(ans,SP-prices[i]);
+            SP=max(SP,prices[i]);
+        }
+        return ans;
+}
