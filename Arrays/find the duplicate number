@@ -1,0 +1,29 @@
+//Brute checking for each element
+int findDuplicate(vector<int>& nums) {
+       int n=nums.size();
+       for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(nums[j]==nums[i]) return nums[i];
+        }
+       }
+       return -1; 
+}
+
+//better equal elements must be adjacent
+int findDuplicate(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int n=nums.size();
+        for(int i=0;i<n-1;i++){
+            if(nums[i]==nums[i+1]) return nums[i];
+        }
+        return -1;
+}
+//storing ele if ele comes again that means that ele is duplicate
+int findDuplicate(vector<int>& nums) {
+    unordered_set<int> s;
+    for(auto &ele:nums) {
+        if(s.find(ele)!=s.end()) return ele;
+        s.insert(ele);
+    }
+    return -1;
+}
