@@ -1,0 +1,11 @@
+//brute 
+double myPow(double x, int n) {
+    double ans=1;
+    int val=abs(n);
+    while(val>0){
+        ans*=x;
+        val--;
+    }
+    if(n<0) ans=1/ans;
+    return ans;
+}

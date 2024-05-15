@@ -1,0 +1,38 @@
+// BRUTE just checking for each and every element is that majority element or not
+int majorityElement(vector<int>& nums) {
+    int n=nums.size();
+    for(int i=0;i<n;i++){
+        int cnt=0;
+        for(int j=0;j<n;j++){
+            if(nums[j]==nums[i]) cnt++;
+        }
+        if(cnt>n/2) return nums[i];
+    }
+    return -1;
+}
+
+//better just store key with value in a map 
+int majorityElement(vector<int>& nums) {
+    unordered_map<int,int> m;
+    int n=nums.size();
+    for(auto &ele:nums) m[ele]++;
+    for(auto &ele:m){
+    if(ele.second>n/2) return ele.first;
+    } 
+    return -1;
+}
+
+
+//best using the fact that req_ele>n/2 
+ 
+ int majorityElement(vector<int>& nums) {
+        int cnt=1,ele=nums[0],n=nums.size();
+        for(int i=1;i<n;i++){
+            if(ele==nums[i]) cnt++;
+            else cnt--;
+            if(cnt==0){
+                cnt=1;ele=nums[i];
+            }
+        }
+        return ele;
+    }

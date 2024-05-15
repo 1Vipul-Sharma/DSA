@@ -1,0 +1,27 @@
+//brute just finding another element after standing at an element
+vector<int> twoSum(vector<int>& nums, int target) {
+    int n=nums.size();
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(nums[i]+nums[j]==target) return {i,j};
+        }
+    }
+    return {-1,-1};
+}
+
+//better using map in order to store instance of elements
+
+vector<int> twoSum(vector<int>& nums, int target) {
+        int n=nums.size();
+        unordered_map<int,int> m;
+        for(int i=0;i<n;i++){
+            int rem=target-nums[i];
+            if(m.find(rem)!=m.end()) {
+                return {i,m[rem]};
+            }
+            m[nums[i]]=i;
+        }
+        return {-1,-1};
+    }
+
+// Two pointer wali bhi h but usme extra space use krna pdega if we want to return indexes of element    
