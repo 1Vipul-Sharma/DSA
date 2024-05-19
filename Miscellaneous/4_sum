@@ -1,0 +1,4 @@
+// optimal left 
+// just fix two pointer and move last two pointer in order to get the target
+
+// same for 3 sum fixx one pointer then move remaining two pointers

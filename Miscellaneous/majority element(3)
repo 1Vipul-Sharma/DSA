@@ -1,1 +1,7 @@
 # o(n) O(1)
+same as n/2 derive the solution from that 
+if(cnt==0) {
+    cnt=1,ele=nums[i];
+}
+if(ele==nums[i]) cnt++;
+else cnt--;

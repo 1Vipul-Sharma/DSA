@@ -1,3 +1,12 @@
-brute
+// brute
 //sari permutaion nikal li sorted form me usse next nikal ke dedo
 
+//stl me direvt function h 
+
+next_permutaion(arr.begin(),arr.end());
+
+//optimal 
+
+// break point nikalo jo ki if(arr[i]<arr[i+1] h) 
+// agr nhi h break point mtlb last permutation h 
+// agr h to just greater ele nikal kr uske right me usse shift krdo
