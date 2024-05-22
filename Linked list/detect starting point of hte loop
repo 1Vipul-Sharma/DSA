@@ -1,0 +1,11 @@
+ ListNode *detectCycle(ListNode *head) {
+        ListNode *temp=head;
+        set<ListNode*> s;
+        while(temp){
+            if(s.find(temp)!=s.end())
+                return temp;
+            s.insert(temp);
+            temp=temp->next;    
+        }
+        return NULL;
+    }
