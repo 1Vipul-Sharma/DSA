@@ -1,0 +1,46 @@
+//main logic is that we have to find leftmax and rightmax fro curr element then min(leftmax,rightmax)-curr[i] if ( > 0) then add it to ans
+
+// us element ke left right me do kammbhe khde bs us hisab se soch lo
+
+//traversing for each index and finding min of left max and right max then - curr[i]
+int trap(vector<int>& height) {
+    int n=height.size();
+    int ans=0;
+    for(int i=1;i<n-1;i++){
+        int j=0;
+        int leftmax=height[j];
+        while(j<=i){
+            leftmax=max(leftmax,height[j]);
+            j++;
+        }
+        j=i+1;
+        int rightmax=height[j];
+        while(j<n){
+            rightmax=max(rightmax,height[j]);
+            j++;
+        }
+        int curr=min(rightmax,leftmax)-height[i];
+        ans+= curr> 0?curr:0;
+    }
+    return ans;
+}
+
+//finding left max while traversing and stored right max already
+int trap(vector<int>& height) {
+    int n=height.size();
+    int ans=0;
+    int leftmax=height[0];
+    vector<int> right(n,0);
+    int maxi=height[n-1];
+    right[n-1]=maxi;
+    for(int i=n-2;i>=0;i--){
+        maxi=max(maxi,height[i]);
+        right[i]=maxi;
+    }
+    for(int i=1;i<n-1;i++){
+        leftmax=max(leftmax,height[i]);
+        int curr=min(right[i],leftmax)-height[i];
+        ans+= curr> 0?curr:0;
+    }
+    return ans;
+}

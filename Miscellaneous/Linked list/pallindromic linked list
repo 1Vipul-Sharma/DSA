@@ -1,0 +1,30 @@
+///aadhe ke baad reverse kro list ko fir check kro ek pointer ko suru me rkhkr ek ko aadhe ke baad rkhkr
+
+
+ListNode *reverse(ListNode *curr){
+    ListNode *prev=NULL;
+    while(curr){
+        ListNode *nxt=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=nxt;
+    }
+    return prev;
+}
+bool isPalindrome(ListNode* head) {
+    ListNode *slow=head;
+    ListNode *fast=head;
+    if(fast==NULL || fast->next==NULL) return true;
+    while(fast->next && fast->next->next){
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    ListNode *rhead=reverse(slow->next);
+    slow=head;
+    while(rhead){
+        if(slow->val!=rhead->val) return false;
+        slow=slow->next;
+        rhead=rhead->next;
+    }
+    return true;
+}
