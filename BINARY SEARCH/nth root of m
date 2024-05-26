@@ -1,0 +1,42 @@
+// /normal search
+int NthRoot(int n, int m) {
+
+  // Write your code here.
+  for(int i=1;i<=m;i++){
+      int times=n;
+      int temp=1;
+      while(times>0){
+          temp*=i;
+          times--;
+      }
+      if(temp==m) return i;
+      if(temp>m) return -1;
+  }
+  return -1;
+}
+
+//using binary search
+
+int find(int base,int m,int n){
+  long long ans=1;
+  while(n--){
+    ans*=base;
+    if(ans>m) return 2;
+  }
+  if(ans==m) return 1;
+  else return 0;
+
+}
+
+int NthRoot(int n, int m) {
+  // Write your code here.
+  int l=1,h=m;
+  while(l<=h){
+    int mid=l+(h-l)/2;
+    int val=find(mid,m,n);
+    if(val==1) return mid;
+    else if(val==0) l=mid+1;
+    else h=mid-1;
+  }
+  return -1;
+}
