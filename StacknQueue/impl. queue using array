@@ -1,0 +1,18 @@
+void MyQueue :: push(int x)
+{
+        // Your Code
+        if(rear<10004){
+            arr[rear++]=x;
+        }
+}
+
+//Function to pop an element from queue and return that element.
+int MyQueue :: pop()
+{
+        // Your Code     
+        if(front<rear){
+            int ele=arr[front++];
+            return ele;
+        }
+        else return -1;
+}
