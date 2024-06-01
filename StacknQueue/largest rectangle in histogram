@@ -1,0 +1,16 @@
+//Brute 
+
+    int largestRectangleArea(vector<int>& heights) {
+      int n=heights.size();
+      int maxArea=0;
+      for(int i=0;i<n;i++){
+        int mini=heights[i];
+        int currMax=mini;
+        for(int j=i+1;j<n;j++){
+            mini=min(mini,heights[j]);
+            currMax=max(currMax,mini*(j-i+1));
+        }
+        maxArea=max(maxArea,currMax);
+      }
+      return maxArea;  
+    }

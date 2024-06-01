@@ -1,0 +1,29 @@
+//brute
+vector<int> Solution::prevSmaller(vector<int> &A) {
+    int n=A.size();
+    vector<int> ans(n,-1);
+    for(int i=0;i<n;i++){
+        for(int j=i-1;j>=0;j--){
+            if(A[j]<A[i]) {
+                ans[i]=A[j];
+                break;
+            }
+        }
+    }
+    return ans;
+}
+
+//better
+
+vector<int> Solution::prevSmaller(vector<int> &A) {
+    int n=A.size();
+    vector<int> ans(n,-1);
+    stack<int> st;
+    st.push(A[0]);
+    for(int i=1;i<n;i++){
+        while(st.size() && st.top()>=A[i]) st.pop();
+        if(st.size()) ans[i]=st.top();
+        st.push(A[i]);
+    }
+    return ans;
+}

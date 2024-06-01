@@ -1,0 +1,40 @@
+    vector<int> nextGreaterElements(vector<int>& nums) {
+       int n=nums.size();
+       stack<int> st;
+       st.push(nums[n-1]);
+       for(int i=n-2;i>=0;i--) {
+        while(st.size() && st.top()<=nums[i]) st.pop();
+        st.push(nums[i]);
+       }
+    
+    for(int i=n-1;i>=0;i--) {
+        while(st.size() && st.top()<=nums[i]) st.pop();
+        // int flag=0;
+        int topush=nums[i];
+        if(st.size()) nums[i]=st.top();
+        else nums[i]=-1;
+        st.push(topush);
+        // if(flag==1) nums[i]=-1;
+    }
+    return nums;
+    }
+
+//same like pvs approach just using 1 loop 
+        vector<int> nextGreaterElements(vector<int>& nums) {
+       int n=nums.size();
+       stack<int> st;
+       st.push(nums[n-1]);
+       for(int i=2*n-2;i>=0;i--) {
+            while(st.size() && st.top()<=nums[i%n]) st.pop();
+            int topush=nums[i%n];
+            if(i<n){
+                if(st.size()) nums[i]=st.top();
+                else nums[i]=-1;
+            }
+            st.push(topush);
+         
+        
+       }
+    
+    return nums;
+    }
