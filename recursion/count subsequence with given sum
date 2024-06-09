@@ -1,0 +1,15 @@
+	int find(int arr[],int n,int left,int idx){
+	    if(left<0) return 0;
+	    if(idx==n) {
+	    if(left==0) return 1;
+	    else return 0;    
+	    }
+	    int l=find(arr,n,left-arr[idx],idx+1);
+	    int r=find(arr,n,left,idx+1);
+	    return l+r;
+	}
+	int perfectSum(int arr[], int n, int sum)
+	{
+        // Your code goes here
+        return find(arr,n,sum,0);
+	}

@@ -1,0 +1,17 @@
+    void insert(stack<int> &s,int temp){
+        if(s.size()==0) {
+            s.push(temp);
+            return ;
+        }
+        int ele=s.top();
+        s.pop();
+        insert(s,temp);
+        s.push(ele);
+    }
+    void Reverse(stack<int> &St){
+      if(St.size()==1) return;
+      int temp=St.top();
+      St.pop();
+      Reverse(St);
+      insert(St,temp);
+    }

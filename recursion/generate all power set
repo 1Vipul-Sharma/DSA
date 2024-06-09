@@ -1,0 +1,15 @@
+    void generate(int idx,vector<int> temp,vector<int> &nums,vector<vector<int>> &res){
+        if(idx==nums.size()){
+            res.push_back(temp);
+            return ;
+        }
+        temp.push_back(nums[idx]);
+        generate(idx+1,temp,nums,res);
+        temp.pop_back();
+        generate(idx+1,temp,nums,res);
+    }
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        generate(0,{},nums,res);
+        return res;   
+    }

@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+void generate(string s,int size){
+    if(s.size()==size){
+        cout<<s<<endl;
+        return ;
+    }
+    generate(s+'0',size);
+    if(s.back()!='1') generate(s+'1',size);
+}
+int main() {
+    // Write C++ code here
+    // std::cout << "Try programiz.pro";
+    generate("",4);
+    return 0;
+}
