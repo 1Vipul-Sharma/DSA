@@ -1,7 +1,7 @@
 #ADITYA VERMA
 
 make Smaller Input
-
+OR
 identify - choices => decision
 
 Make the recursion tree
@@ -23,11 +23,13 @@ we maintain op and ip
         /                   \
     /                           \
 
-op="" ip="b" op="a" ip="b"
+op="" ip="b" ,,,,,,,,,,,,,,,, op="a" ip="b"
+
+basically yehi h suru ke index se decide karte chlenge ek baar generate krenge bina liye ek baar lenge
 
 =======================================
 
-=====================================
+=======================================
 mainly for easy
 IBH(induction base hypothesis)
 

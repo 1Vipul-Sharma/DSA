@@ -1,6 +1,7 @@
 {
-    "files.associations": {
-        "*.ejs": "html",
-        "trapping raniwater": "c"
-    }
+  "files.associations": {
+    "*.ejs": "html",
+    "trapping raniwater": "c",
+    "ostream": "cpp"
+  }
 }
