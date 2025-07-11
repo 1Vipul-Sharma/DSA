@@ -4,7 +4,7 @@ make Smaller Input
 OR
 identify - choices => decision
 
-Make the recursion tree
+Make the recursion tree (nodes sirf recursive function ko indicate karne ke liye banate not for simple ones)
 
 first try to take decisions (ip op wala method chlega)
 
@@ -25,7 +25,14 @@ we maintain op and ip
 
 op="" ip="b" ,,,,,,,,,,,,,,,, op="a" ip="b"
 
+kind of input space small karte jarhe h
+
+choices h decision lerhe h usi basis par
 basically yehi h suru ke index se decide karte chlenge ek baar generate krenge bina liye ek baar lenge
+
+Is type ke method me sabse pehle try to make a recursion tree then write code
+
+jab logic nhi likh pare ho to koi basic example lo tree bnao and then try to generalize it
 
 =======================================
 
@@ -55,13 +62,17 @@ print(6)
 .
 .
 
+EK to ese soch sakte
 khud se niche wali cheez hame shi answer degi ye maan ke chalo
 bas apna step shi karo niche wale ko call karo wo already shi answer degi esa ham maan chuke h
 bas last me base condition shi likhni h
+
+isse kaam na chle to try karo
+n se n-1 ki transaction me kya hora h n-1 => n me aane ke lie kya karna hoga
 
 # ========================================
 
 DP
 choice diagram
 
-=======================================
+==========================================

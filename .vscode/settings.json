@@ -2,6 +2,8 @@
   "files.associations": {
     "*.ejs": "html",
     "trapping raniwater": "c",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "vector": "cpp",
+    "xstring": "cpp"
   }
 }
