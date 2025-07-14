@@ -2,7 +2,7 @@
 
 
 // so first i try to solve it using IBH 
-// but suppose for n=3 i get ccorrect answer for n=2 now for 3rd there is lot many options like i can add in start in b/w at last.
+// but suppose for n=3 i get correct answer for n=2 now for 3rd there is lot many options like i can add in start in b/w at last.
 // so i drooped the idea of using IBH
 
 
