@@ -1,3 +1,6 @@
+
+
+// abc => a bc , a b c , abc , ab c 
 class Solution {
   public:
     void solve(string &s,int idx,string curr,vector<string> &res){

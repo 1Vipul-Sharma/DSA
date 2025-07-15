@@ -22,6 +22,11 @@ using namespace std;
 
 //     str.push_back(ch); // restore original string after recursion (optional here)
 // }
+
+//ip op method h bas mene index se kara h 
+// take not take isslie chlrha h as dekhega to isme kuh esa nhi ki pehle pe ye choice h dusre pr wo choice h 
+
+
 void subset(string &str, int idx, string curr) {
     if(idx==str.size()){
         cout<<curr<<endl;
@@ -46,3 +51,5 @@ int main() {
 
     return 0;
 }
+
+

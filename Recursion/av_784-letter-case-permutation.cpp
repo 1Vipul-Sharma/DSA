@@ -1,3 +1,6 @@
+// a1B2 ==> a1b2 , A1b2 ,A1B2 , a1B2  
+
+
 // just try to solving it using ibh method
 // class Solution {
 // public:

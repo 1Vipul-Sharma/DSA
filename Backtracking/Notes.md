@@ -45,3 +45,9 @@ sometimes n! or 2^n this is usually the max no of nodes at any level taken by us
 mainly expo, factorial or polynomial
 
 worst time complexity = O(time calculated)
+
+ek h input size reduce karna fir relation dekhna (jisme mainly make chlte n-1 shi answer dega bas n ko n-1 ka shi answer pata h bas ab apna kaam karna h there might be other way also)
+
+ek h ip op method
+
+ek h choices h fir decision lene h
