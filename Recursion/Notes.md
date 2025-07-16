@@ -1,6 +1,6 @@
 #ADITYA VERMA
 
-make Smaller Input
+Try to make Input smaller
 OR
 identify - choices => decision
 
@@ -76,3 +76,9 @@ DP
 choice diagram
 
 ==========================================
+
+# Try to check steps before calling recursion If it is valid to call or not
+
+# break bigger into similar smaller problems ko recursion handle karlega
+
+# Try out all possible combination
