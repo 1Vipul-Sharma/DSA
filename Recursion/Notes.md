@@ -6,7 +6,7 @@ identify - choices => decision
 
 Make the recursion tree (nodes sirf recursive function ko indicate karne ke liye banate not for simple ones)
 
-first try to take decisions (ip op wala method chlega)
+first try to take decisions (ip op wala method chlega) (Take note take wala)
 
 if unable then try to reduce input size ( IBH wala chlega)
 
