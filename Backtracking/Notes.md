@@ -69,3 +69,116 @@ general thing is check before taking any decision whether violating the conditio
 If yes then don't take the decision
 
 Try to check steps before calling recursion If it is valid to call or not
+
+==============================================================================================================================
+
+🌀 RECURSION
+Recursion is a technique where a function calls itself to solve a smaller part of the problem.
+
+Types of Recursion:
+mathematica
+Copy
+Edit
+RECURSION
+/ | \
+ / | \
+ BACKTRACKING DP D&C
+🔁 BACKTRACKING
+Backtracking = Controlled Recursion + Reverting changes
+
+🔹 Core Idea:
+You make a decision, explore further with that decision, and then revert it if it leads to a dead end.
+
+🔍 Identification of Backtracking Problems
+You’re given choices and need to make decisions
+
+You need all combinations/paths
+
+Input size is small
+
+No greedy or optimal guarantee
+
+You must undo your decisions (backtrack)
+
+Ex: N-Queens, Sudoku, Combinations, Subsets, Word Search
+
+🔁 Why Pass by Reference?
+Reduces memory usage (avoids copying vectors/arrays)
+
+Improves speed
+
+Backtracking ensures we revert changes when coming back from recursion
+
+⚠️ Use only when you know how to correctly revert changes
+
+🧠 General Template
+cpp
+Copy
+Edit
+void solve(vector<int>& v) {
+// Base case
+if (isSolved()) {
+print/save solution;
+return;
+}
+
+    for (choice : choices) {
+        if (isValid(choice)) {
+            // Take the decision
+            makeChange(v, choice);
+
+            // Recurse
+            solve(v);
+
+            // Undo the decision (backtrack)
+            revertChange(v, choice);
+        }
+    }
+
+}
+📊 Time Complexity of Recursive Code
+🔹 How to Find Time Complexity:
+Total Time = (No. of Recursive Calls or Nodes) × (Work done per node)
+
+Common growth types:
+
+O(2^n) – Each state has 2 choices (e.g., Subsets)
+
+O(n!) – All permutations (e.g., Travelling Salesman, Permutations)
+
+O(k^n) – K choices per position (e.g., Word Search, Sudoku)
+
+🧩 How to Build Recursion
+Input/Output Method:
+
+Pass input and output separately (used in combinations, subsets).
+
+Choices + Decision Method:
+
+You’re at a point with multiple choices → pick one → recurse → backtrack
+
+💡 Optimization Insight (N-Queens, Sudoku etc.)
+Instead of updating the board blindly, ask:
+
+“Is this move valid before making it?”
+
+Saves unnecessary recursion calls
+
+✔️ Example:
+
+Don’t mark all attack paths in N-Queens.
+
+Instead, before placing a queen, check if the column or diagonal is already under attack.
+
+This reduces overhead and speeds up recursion.
+
+✅ Best Practices
+Avoid unnecessary recursion by checking validity first
+
+Track visited/used items using hashsets, bitmasks, arrays
+
+Backtrack properly to ensure state cleanup
+
+Use reference where safe and revert properly
+
+Use pruning wherever possible (cut off invalid branches early)
