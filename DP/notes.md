@@ -31,3 +31,9 @@ unbounded - we have no bound for the input elements. we have infinite supply for
 ways to partition an array
 2035
 partition with given difference
+target sum
+adjust dp array while range is negative
+
+//Len and PRINT LCS (DONE n dusted)
+//len and Print LCsubstring
+//lene and print shortest common subsequence
