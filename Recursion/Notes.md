@@ -69,6 +69,7 @@ bas last me base condition shi likhni h
 
 isse kaam na chle to try karo
 n se n-1 ki transaction me kya hora h n-1 => n me aane ke lie kya karna hoga
+try to find recurrence relation
 
 # ========================================
 

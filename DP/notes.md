@@ -36,7 +36,7 @@ adjust dp array while range is negative
 
 //Len and PRINT LCS (DONE n dusted)
 //len and Print LCsubstring
-//lene and print shortest common subsequence
+//len and print shortest common subsequence
 //len and print LPS and LPsubstring
-
+j
 // string with integer DP questions
