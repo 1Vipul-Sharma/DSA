@@ -58,4 +58,4 @@ allocate min pages me bhi mene ese hi socha ki noOfPages h jo allocate krne h to
 ```
 
 GFG - Aggressive Cows
-GFG - Allocate Minimum Pages
+GFG - Allocate Minimum Pages , 410 - split array largest sum ,Coding ninjas - painters partition (https://www.naukri.com/code360/problems/painter-s-partition-problem_1089557?leftPanelTabValue=PROBLEM)(similar)
