@@ -5,7 +5,7 @@ lower_bound = smallest index such that arr[idx]>= target ================ lower_
 
 upper_bound = smallest index such that arr[idx]>target
 
-Main logic is we should alwaus try to skip search space
+Main logic is we should always try to skip search space
 ```
 
 33 Leetcode
@@ -59,3 +59,10 @@ allocate min pages me bhi mene ese hi socha ki noOfPages h jo allocate krne h to
 
 GFG - Aggressive Cows
 GFG - Allocate Minimum Pages , 410 - split array largest sum ,Coding ninjas - painters partition (https://www.naukri.com/code360/problems/painter-s-partition-problem_1089557?leftPanelTabValue=PROBLEM)(similar)
+
+// BS on 2D array
+
+GFG - https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
+
+74 - search in a 2D matrix
+240 - search in a 2D 2 part
